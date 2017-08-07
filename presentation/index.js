@@ -45,6 +45,18 @@ export default class Presentation extends React.Component {
             React-ing htmlFor=empathy
           </Heading>
         </Slide>
+        <Slide textSize="2.5rem">
+          <Heading fit size={1}>
+            slide deck is online!
+          </Heading>
+          <Link
+            href="http://janabeck.com/diving-bell-talk/"
+            target="_blank"
+            textColor="secondary"
+          >
+            http://janabeck.com/diving-bell-talk/
+          </Link>
+        </Slide>
         <Slide>
           <Heading
             lineHeight={1.35}
@@ -81,18 +93,7 @@ export default class Presentation extends React.Component {
             </span>&nbsp;@iPancreas
           </Heading>
         </Slide>
-        <Slide textSize="2.5rem">
-          <Heading fit size={1}>
-            slide deck is online!
-          </Heading>
-          <Link
-            href="http://janabeck.com/diving-bell-talk/"
-            target="_blank"
-            textColor="secondary"
-          >
-            http://janabeck.com/diving-bell-talk/
-          </Link>
-        </Slide>
+        {/* TODO: company slide? */}
       </Deck>
     );
   }
