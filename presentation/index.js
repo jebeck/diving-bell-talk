@@ -32,7 +32,10 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
+  bestCoverWebcam: require("../assets/images/best-cover-webcam.png"),
+  bestCoverWebcam2: require("../assets/images/best-cover-webcam2.png"),
   brixtonTreadmill: require("../assets/images/treadmill-Brixton-prison.jpg"),
+  chatroulette: require("../assets/images/chatroulette.png"),
   empathy: require("../assets/images/empathy.jpg"),
   empathyShoes: require("../assets/images/empathy-shoes.jpg"),
   jdbDictating: require("../assets/images/jdb-dictating.jpg"),
@@ -40,7 +43,9 @@ const images = {
   okGoTreadmill: require("../assets/images/ok-go-treadmill.gif"),
   oscarWilde: require("../assets/images/oscar-wilde.jpg"),
   prestonTreadmill: require("../assets/images/treadmill-Preston-prison.jpg"),
+  telegraphTapeWebcam: require("../assets/images/telegraph-tape-webcam.png"),
   treadmill: require("../assets/images/treadmill.jpg"),
+  webcam: require("../assets/images/webcam.jpg"),
   williamCubitt: require("../assets/images/william-cubitt.jpg")
 };
 
@@ -358,8 +363,10 @@ export default class Presentation extends React.Component {
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
-        <Slide>
-          <Heading fit>partner-assisted scanning</Heading>
+        <Slide bgColor="quartenary">
+          <Heading fit textColor="secondary">
+            partner-assisted scanning
+          </Heading>
         </Slide>
         <Slide bgColor="secondary">
           <BlockQuote>
@@ -403,6 +410,85 @@ export default class Presentation extends React.Component {
             </Quote>
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading fit lineHeight={1.5} textColor="secondary">
+            <S type="italic">partner-less</S>
+            <br />partner-assisted scanning
+          </Heading>
+          <Appear>
+            <Heading>(😮)</Heading>
+          </Appear>
+        </Slide>
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.webcam})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        >
+          <div style={{ height: "100vh", width: "100vw" }}>
+            <Link
+              href="https://commons.wikimedia.org/wiki/File:Webcam000c1.jpg"
+              target="_blank"
+              textColor="secondary"
+              textSize="0.5em"
+              style={{ position: "fixed", bottom: "1rem", left: "5rem" }}
+            >
+              Public domain image via the Wikimedia Commons
+            </Link>
+          </div>
+        </Slide>
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.chatroulette})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.telegraphTapeWebcam})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        {/* <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.bestCoverWebcam})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        /> */}
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.bestCoverWebcam2})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <Slide bgColor="tertiary">
+          <Layout style={{ alignItems: "center" }}>
+            <Fill>
+              <Image src={images.treadmill} width={400} />
+            </Fill>
+            <Heading size={3} textColor="primary">
+              &nbsp;vs.&nbsp;
+            </Heading>
+            <Fill>
+              <Image src={images.webcam} width={400} />
+            </Fill>
+          </Layout>
         </Slide>
       </Deck>
     );
