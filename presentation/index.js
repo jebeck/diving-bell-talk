@@ -8,7 +8,10 @@ import {
   BlockQuote,
   Cite,
   Deck,
+  Fill,
   Heading,
+  Image,
+  Layout,
   Link,
   Quote,
   S,
@@ -22,6 +25,8 @@ import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+import FreqOrderedLetters from "../assets/components/freqorderedletters";
+
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
@@ -30,6 +35,8 @@ const images = {
   brixtonTreadmill: require("../assets/images/treadmill-Brixton-prison.jpg"),
   empathy: require("../assets/images/empathy.jpg"),
   empathyShoes: require("../assets/images/empathy-shoes.jpg"),
+  jdbDictating: require("../assets/images/jdb-dictating.jpg"),
+  jdbWithKids: require("../assets/images/jdb-with-kids.jpg"),
   okGoTreadmill: require("../assets/images/ok-go-treadmill.gif"),
   oscarWilde: require("../assets/images/oscar-wilde.jpg"),
   prestonTreadmill: require("../assets/images/treadmill-Preston-prison.jpg"),
@@ -56,7 +63,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck
         progress="bar"
-        transition={["fade"]}
+        transition={["slide"]}
         transitionDuration={350}
         theme={theme}
       >
@@ -312,7 +319,18 @@ export default class Presentation extends React.Component {
           </Heading>
           <Heading fit>definitive</Heading>
         </Slide>
-        {/* TODO: Jean-Do intro slide(s) */}
+        <Slide>
+          <Image src={images.jdbWithKids} width="75%" />
+          <Heading fit size={3}>
+            Jean-Dominique Bauby
+          </Heading>
+        </Slide>
+        <Slide>
+          <Image src={images.jdbDictating} width="75%" />
+          <Heading fit size={3}>
+            Jean-Dominique Bauby at Berck-sur-Mer with Claude Mendibil
+          </Heading>
+        </Slide>
         <Slide bgColor="secondary">
           <BlockQuote>
             <Quote textColor="primary">
@@ -336,6 +354,52 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               In my case, blinking my left eyelid is my only means of
               communication.
+            </Quote>
+            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide>
+          <Heading fit>partner-assisted scanning</Heading>
+        </Slide>
+        <Slide bgColor="secondary">
+          <BlockQuote>
+            <Quote textColor="primary">It is a simple enough system.</Quote>
+            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide bgColor="secondary">
+          <BlockQuote>
+            <Quote textColor="primary">
+              You read off the alphabet (ETA version, not ABC) until, with a
+              blink of my eye, I stop you at the letter to be noted.
+            </Quote>
+            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide bgColor="secondary" textColor="primary">
+          <Heading fit lineHeight={1.5}>
+            French frequency-ordered alphabet
+          </Heading>
+          <Layout>
+            <Fill>
+              <FreqOrderedLetters locale="fr" />
+            </Fill>
+          </Layout>
+        </Slide>
+        {/* <Slide bgColor="secondary" textColor="primary">
+          <Heading fit lineHeight={1.5}>
+            English frequency-ordered alphabet
+          </Heading>
+          <Layout>
+            <Fill>
+              <FreqOrderedLetters locale="en" />
+            </Fill>
+          </Layout>
+        </Slide> */}
+        <Slide bgColor="secondary">
+          <BlockQuote>
+            <Quote textColor="primary">
+              Nervous visitors come most quickly to grief.
             </Quote>
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
