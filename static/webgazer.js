@@ -10056,7 +10056,7 @@ var mosseFilterResponses = function() {
     this.dataClicks = new webgazer.util.DataWindow(dataWindow);
     this.dataTrail = new webgazer.util.DataWindow(dataWindow);
 
-    this.worker = new Worker('ridgeWorker.js');
+    this.worker = new Worker('/static/ridgeWorker.js');
     this.worker.onerror = function(err) {
       console.log(err.message);
     };
