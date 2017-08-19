@@ -16,7 +16,8 @@ import {
   Link,
   Quote,
   S,
-  Slide
+  Slide,
+  Text
 } from "spectacle";
 import { FaExternalLink, FaGithub, FaTwitter } from "react-icons/lib/fa";
 
@@ -631,6 +632,7 @@ export default class Presentation extends React.Component {
           code={require("raw-loader!../assets/code/webgazer-react-1.example")}
           ranges={[
             { loc: [0, 0], title: "WebGazer in React" },
+            { loc: [0, 1], note: "component class" },
             {
               loc: [4, 5],
               note: "initial state is null for x & y"
@@ -664,8 +666,35 @@ export default class Presentation extends React.Component {
             { loc: [24, 27], note: "remove listener & end webcam session" }
           ]}
         />
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-react-3.example")}
+          ranges={[
+            { loc: [0, 0], title: ".showPredictionPoints()" },
+            {
+              loc: [8, 23]
+            },
+            {
+              loc: [21, 22],
+              note: "pass `true` to showPredictionPoints()"
+            },
+            {
+              loc: [26, 30],
+              ontoe: "pass `false` to cleanup"
+            }
+          ]}
+        />
         <Slide>
           <WebGazer showPredictionPoints />
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Text lineHeight={1.5} textColor="secondary">
+            <S type="italic">partner-less</S>
+            <br />partner-assisted scanning
+          </Text>
+          <Heading fit lineHeight={1.5} textColor="secondary">
+            implementation (sketch)
+          </Heading>
         </Slide>
       </Deck>
     );
