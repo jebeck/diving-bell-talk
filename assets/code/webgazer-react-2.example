@@ -1,0 +1,33 @@
+class WebGazer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { x: null, y: null };
+  }
+
+  componentDidMount() {
+    webgazer
+      .setGazeListener(
+        (data, elapsedTime) => {
+          if (data == null) {
+            return;
+          }
+          const { x, y } = data;
+          this.setState(() => ({
+            x,
+            y
+          }));
+        }
+      )
+      .begin();
+  }
+
+  componentWillUnmount() {
+    webgazer.clearGazeListener().end();
+  }
+
+  render() {
+    const { x, y } = this.state;
+    return <div>{`[${x}, ${y}]`}</div>;
+  }
+}

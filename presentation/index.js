@@ -1,5 +1,6 @@
 // Import React
 import React from "react";
+import CodeSlide from "spectacle-code-slide";
 import shuffle from "shuffle-array";
 
 // Import Spectacle Core tags
@@ -26,18 +27,17 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 
 import FreqOrderedLetters from "../assets/components/freqorderedletters";
+import WebGazer from "../assets/components/webgazer.js";
 
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-  bestCoverWebcam: require("../assets/images/best-cover-webcam.png"),
   bestCoverWebcam2: require("../assets/images/best-cover-webcam2.png"),
   brixtonTreadmill: require("../assets/images/treadmill-Brixton-prison.jpg"),
+  catHuggingStuffy: require("../assets/images/cat-hugging-stuffy.gif"),
   chatroulette: require("../assets/images/chatroulette.png"),
-  empathy: require("../assets/images/empathy.jpg"),
-  empathyShoes: require("../assets/images/empathy-shoes.jpg"),
   jdbDictating: require("../assets/images/jdb-dictating.jpg"),
   jdbWithKids: require("../assets/images/jdb-with-kids.jpg"),
   okGoTreadmill: require("../assets/images/ok-go-treadmill.gif"),
@@ -46,7 +46,9 @@ const images = {
   telegraphTapeWebcam: require("../assets/images/telegraph-tape-webcam.png"),
   treadmill: require("../assets/images/treadmill.jpg"),
   webcam: require("../assets/images/webcam.jpg"),
-  williamCubitt: require("../assets/images/william-cubitt.jpg")
+  webgazer: require("../assets/images/webgazer.png"),
+  williamCubitt: require("../assets/images/william-cubitt.jpg"),
+  xcoffee: require("../assets/images/xcoffee.gif")
 };
 
 preloader(images);
@@ -489,6 +491,181 @@ export default class Presentation extends React.Component {
               <Image src={images.webcam} width={400} />
             </Fill>
           </Layout>
+        </Slide>
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.xcoffee})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        >
+          <div style={{ height: "100vh", width: "100vw" }}>
+            <Link
+              href="http://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
+              target="_blank"
+              textColor="quartenary"
+              textSize="0.5em"
+              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
+            >
+              "The Trojan Room Coffee Pot Biography"
+            </Link>
+          </div>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Layout style={{ alignItems: "center" }}>
+            <Fill>
+              <Image src={images.treadmill} width={400} />
+            </Fill>
+            <Heading size={3} textColor="primary">
+              &nbsp;vs.&nbsp;
+            </Heading>
+            <Fill>
+              <Image src={images.webcam} width={400} />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide
+          style={{
+            backgroundImage: `url(${images.webgazer})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <Slide>
+          <Heading fit size={1} textFont="monospace">
+            {"<script src=\"webgazer.js\" type=\"text/javascript\" >"}
+          </Heading>
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-simple-start.example")}
+          ranges={[
+            { loc: [0, 0], title: "WebGazer: simple start" },
+            {
+              loc: [0, 8],
+              note: "1) set gaze listener callback fn"
+            },
+            {
+              loc: [8, 9],
+              note: "2) begin!"
+            }
+          ]}
+        />
+        <Slide>
+          <Heading fit>🤔 WebGazer + React...?? 🤔</Heading>
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-via-index.example")}
+          ranges={[
+            { loc: [0, 0], title: "load via index.html" },
+            {
+              loc: [8, 12],
+              note: "late execution for WebGL"
+            },
+            {
+              loc: [3, 7],
+              note: "💰💰💰 data processing in Web Worker "
+            }
+          ]}
+        />
+        <Slide>
+          <Heading fit lineHeight={1.25}>
+            {shuffle([
+              "👷‍♀️",
+              "👷🏻‍♀️",
+              "👷🏼‍♀️",
+              "👷🏽‍♀️",
+              "👷🏾‍♀️",
+              "👷🏿‍♀️",
+              "👷",
+              "👷🏻",
+              "👷🏼",
+              "👷🏽",
+              "👷🏾",
+              "👷🏿"
+            ]).join("")}
+          </Heading>
+          <Heading fit>Web Workers</Heading>
+          <Heading fit lineHeight={1.25}>
+            {shuffle([
+              "👷‍♀️",
+              "👷🏻‍♀️",
+              "👷🏼‍♀️",
+              "👷🏽‍♀️",
+              "👷🏾‍♀️",
+              "👷🏿‍♀️",
+              "👷",
+              "👷🏻",
+              "👷🏼",
+              "👷🏽",
+              "👷🏾",
+              "👷🏿"
+            ]).join("")}
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading fit>🕴️ WebGazer + React...?? 🕴️</Heading>
+        </Slide>
+        <Slide
+          bgImage={images.catHuggingStuffy}
+          style={{
+            backgroundImage: `url(${images.xcoffee})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        >
+          <Heading fit textColor="primary">
+            the lifecycle is your
+          </Heading>
+          <Heading fit textColor="primary">
+            friend
+          </Heading>
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-react-1.example")}
+          ranges={[
+            { loc: [0, 0], title: "WebGazer in React" },
+            {
+              loc: [4, 5],
+              note: "initial state is null for x & y"
+            },
+            {
+              loc: [7, 8],
+              note: "first mount = hook for WebGazer setup"
+            },
+            {
+              loc: [8, 22],
+              note: "same simple setup"
+            },
+            {
+              loc: [15, 19],
+              note: "but for one difference"
+            },
+            {
+              loc: [24, 28],
+              note: "render the position"
+            }
+          ]}
+        />
+        <Slide>
+          <WebGazer showPredictionPoints={false} />
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-react-2.example")}
+          ranges={[
+            { loc: [0, 0], title: "clean up!" },
+            { loc: [24, 27], note: "remove listener & end webcam session" }
+          ]}
+        />
+        <Slide>
+          <WebGazer showPredictionPoints />
         </Slide>
       </Deck>
     );

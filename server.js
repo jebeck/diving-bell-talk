@@ -10,18 +10,22 @@ var compiler = webpack(config);
 
 var serverPort = process.env.PORT || 3000;
 
-app.use(require("webpack-dev-middleware")(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}));
+app.use(
+  require("webpack-dev-middleware")(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  })
+);
 
 app.use(require("webpack-hot-middleware")(compiler));
+
+app.use("/static", express.static("static"));
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.listen(serverPort, "localhost", function (err) {
+app.listen(serverPort, "localhost", function(err) {
   if (err) {
     console.log(err);
     return;

@@ -1,0 +1,9 @@
+webgazer
+  .setGazeListener((data, elapsedTime) => {
+    if (data == null) {
+      return;
+    }
+    const { x, y } = data;
+    console.log(`${elapsedTime}: ${x}, ${y}`);
+  })
+  .begin();
