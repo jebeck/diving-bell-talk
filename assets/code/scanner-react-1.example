@@ -1,0 +1,36 @@
+class Scanner extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentLetter: null,
+      selectedLetters: []
+    };
+  }
+
+  render() {
+    const { letters } = this.props;
+    const {
+      currentLetter,
+      selectedLetters
+    } = this.state;
+    return (
+      <div>
+        <CurrentLetter
+          currentLetter={currentLetter}
+        />
+        <FreqOrderedAlphabet
+          currentLetter={currentLetter}
+          letters={letters}
+        />
+        <SelectedLetters
+          selected={selectedLetters}
+        />
+      </div>
+    );
+  }
+}
+
+Scanner.defaultProps = {
+  letters: ["e", "t", "a"]
+};

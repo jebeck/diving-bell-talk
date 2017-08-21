@@ -36,9 +36,11 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   bestCoverWebcam2: require("../assets/images/best-cover-webcam2.png"),
+  blinkUISketch: require("../assets/images/blink-UI-sketch.png"),
   brixtonTreadmill: require("../assets/images/treadmill-Brixton-prison.jpg"),
   catHuggingStuffy: require("../assets/images/cat-hugging-stuffy.gif"),
   chatroulette: require("../assets/images/chatroulette.png"),
+  esaReference: require("../assets/images/ESA-reference.jpg"),
   jdbDictating: require("../assets/images/jdb-dictating.jpg"),
   jdbWithKids: require("../assets/images/jdb-with-kids.jpg"),
   okGoTreadmill: require("../assets/images/ok-go-treadmill.gif"),
@@ -396,16 +398,6 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        {/* <Slide bgColor="secondary" textColor="primary">
-          <Heading fit lineHeight={1.5}>
-            English frequency-ordered alphabet
-          </Heading>
-          <Layout>
-            <Fill>
-              <FreqOrderedLetters locale="en" />
-            </Fill>
-          </Layout>
-        </Slide> */}
         <Slide bgColor="secondary">
           <BlockQuote>
             <Quote textColor="primary">
@@ -696,6 +688,86 @@ export default class Presentation extends React.Component {
             implementation (sketch)
           </Heading>
         </Slide>
+        <Slide>
+          <Heading fit lineHeight={1.5}>
+            the partner's role
+          </Heading>
+          <Text>1️⃣ display the frequency-ordered alphabet for reference</Text>
+        </Slide>
+        <Slide bgImage={images.esaReference}>
+          <div style={{ height: "100vh", width: "100vw" }}>
+            <Link
+              href="https://commons.wikimedia.org/w/index.php?curid=5459869"
+              target="_blank"
+              textColor="primary"
+              textSize="0.5em"
+              style={{ position: "fixed", top: "1rem", right: "0" }}
+            >
+              Image from <em>The Diving Bell &amp; The Butterfly</em> (Fair Use)
+            </Link>
+          </div>
+        </Slide>
+        <Slide bgColor="secondary" textColor="primary">
+          <Heading fit lineHeight={1.5}>
+            English frequency-ordered alphabet
+          </Heading>
+          <Layout>
+            <Fill>
+              <FreqOrderedLetters locale="en" />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide>
+          <Heading fit lineHeight={1.5}>
+            the partner's role
+          </Heading>
+          <Text>2️⃣ loop through the letters</Text>
+        </Slide>
+        <Slide>
+          <Heading fit lineHeight={1.5}>
+            the partner's role
+          </Heading>
+          <Text>3️⃣ record the selected letters</Text>
+        </Slide>
+        <Slide
+          style={{
+            backgroundImage: `url(${images.blinkUISketch})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/scanner-react-1.example")}
+          ranges={[
+            { loc: [0, 0], title: "React sketch: Scanner" },
+            {
+              loc: [33, 36],
+              note: "(default) props: freq-ordered alphabet"
+            },
+            {
+              loc: [4, 8],
+              note: "state: currentLetter & selectedLetter"
+            },
+            {
+              loc: [10, 31],
+              note: "entire render"
+            },
+            {
+              loc: [18, 21],
+              note: "child #1: CurrentLetter"
+            },
+            {
+              loc: [21, 25],
+              note: "child #2: FreqOrderedAlphabet"
+            },
+            {
+              loc: [25, 28],
+              note: "child #3: SelectedLetters"
+            }
+          ]}
+        />
       </Deck>
     );
   }
