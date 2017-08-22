@@ -32,5 +32,5 @@ class Scanner extends React.Component {
 }
 
 Scanner.defaultProps = {
-  letters: ["e", "t", "a"]
+  letters: ["e", "t", "a", ...]
 };

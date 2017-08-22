@@ -35,14 +35,17 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
+  benLomond: require("../assets/images/ben-lomond.jpg"),
   bestCoverWebcam2: require("../assets/images/best-cover-webcam2.png"),
   blinkUISketch: require("../assets/images/blink-UI-sketch.png"),
   brixtonTreadmill: require("../assets/images/treadmill-Brixton-prison.jpg"),
   catHuggingStuffy: require("../assets/images/cat-hugging-stuffy.gif"),
   chatroulette: require("../assets/images/chatroulette.png"),
+  divingBellLanding: require("../assets/images/diving-bell-landing.png"),
   esaReference: require("../assets/images/ESA-reference.jpg"),
   jdbDictating: require("../assets/images/jdb-dictating.jpg"),
   jdbWithKids: require("../assets/images/jdb-with-kids.jpg"),
+  lucilleBluthWink: require("../assets/images/lucille-bluth-wink.gif"),
   okGoTreadmill: require("../assets/images/ok-go-treadmill.gif"),
   oscarWilde: require("../assets/images/oscar-wilde.jpg"),
   prestonTreadmill: require("../assets/images/treadmill-Preston-prison.jpg"),
@@ -51,6 +54,7 @@ const images = {
   webcam: require("../assets/images/webcam.jpg"),
   webgazer: require("../assets/images/webgazer.png"),
   williamCubitt: require("../assets/images/william-cubitt.jpg"),
+  williamCubittDead: require("../assets/images/william-cubitt-dead.png"),
   xcoffee: require("../assets/images/xcoffee.gif")
 };
 
@@ -260,28 +264,15 @@ export default class Presentation extends React.Component {
             </Link>
           </div>
         </Slide>
-        {/* TODO: slide of Ben Lomond from Dad's kitchen */}
         <Slide
           style={{
             backgroundColor: "#e5d8c6",
-            backgroundImage: `url(${images.oscarWilde})`,
+            backgroundImage: `url(${images.benLomond})`,
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="https://commons.wikimedia.org/w/index.php?curid=5459869"
-              target="_blank"
-              textColor="primary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "0" }}
-            >
-              Public domain image by Napoleon Sarony via the Wikimedia Commons
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide bgImage={images.treadmill}>
           <Heading
             bgColor="rgba(255,255,255,0.6666666667)"
@@ -313,6 +304,27 @@ export default class Presentation extends React.Component {
           <Heading lineHeight={1.5} fit>
             <S type="strikethrough">long live the inventor!</S>
           </Heading>
+        </Slide>
+        <Slide
+          style={{
+            backgroundColor: "#e5d8c6",
+            backgroundImage: `url(${images.williamCubittDead})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        >
+          <div style={{ height: "100vh", width: "100vw" }}>
+            <Link
+              href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
+              target="_blank"
+              textColor="quartenary"
+              textSize="0.5em"
+              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
+            >
+              Image via the BBC
+            </Link>
+          </div>
         </Slide>
         <Slide>
           <Heading fit>technologies have</Heading>
@@ -406,6 +418,14 @@ export default class Presentation extends React.Component {
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
+        <Slide
+          style={{
+            backgroundImage: `url(${images.divingBellLanding})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
         <Slide bgColor="quartenary">
           <Heading fit lineHeight={1.5} textColor="secondary">
             <S type="italic">partner-less</S>
@@ -415,110 +435,7 @@ export default class Presentation extends React.Component {
             <Heading>(😮)</Heading>
           </Appear>
         </Slide>
-        <Slide
-          bgColor="tertiary"
-          style={{
-            backgroundImage: `url(${images.webcam})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="https://commons.wikimedia.org/wiki/File:Webcam000c1.jpg"
-              target="_blank"
-              textColor="secondary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "5rem" }}
-            >
-              Public domain image via the Wikimedia Commons
-            </Link>
-          </div>
-        </Slide>
-        <Slide
-          bgColor="tertiary"
-          style={{
-            backgroundImage: `url(${images.chatroulette})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        />
-        <Slide
-          bgColor="tertiary"
-          style={{
-            backgroundImage: `url(${images.telegraphTapeWebcam})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        />
-        {/* <Slide
-          bgColor="tertiary"
-          style={{
-            backgroundImage: `url(${images.bestCoverWebcam})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        /> */}
-        <Slide
-          bgColor="tertiary"
-          style={{
-            backgroundImage: `url(${images.bestCoverWebcam2})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        />
-        <Slide bgColor="tertiary">
-          <Layout style={{ alignItems: "center" }}>
-            <Fill>
-              <Image src={images.treadmill} width={400} />
-            </Fill>
-            <Heading size={3} textColor="primary">
-              &nbsp;vs.&nbsp;
-            </Heading>
-            <Fill>
-              <Image src={images.webcam} width={400} />
-            </Fill>
-          </Layout>
-        </Slide>
-        <Slide
-          bgColor="tertiary"
-          style={{
-            backgroundImage: `url(${images.xcoffee})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="http://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
-            >
-              "The Trojan Room Coffee Pot Biography"
-            </Link>
-          </div>
-        </Slide>
-        <Slide bgColor="tertiary">
-          <Layout style={{ alignItems: "center" }}>
-            <Fill>
-              <Image src={images.treadmill} width={400} />
-            </Fill>
-            <Heading size={3} textColor="primary">
-              &nbsp;vs.&nbsp;
-            </Heading>
-            <Fill>
-              <Image src={images.webcam} width={400} />
-            </Fill>
-          </Layout>
-        </Slide>
+        <Slide bgImage={images.lucilleBluthWink} />
         <Slide
           style={{
             backgroundImage: `url(${images.webgazer})`,
@@ -626,24 +543,24 @@ export default class Presentation extends React.Component {
             { loc: [0, 0], title: "WebGazer in React" },
             { loc: [0, 1], note: "component class" },
             {
-              loc: [4, 5],
-              note: "initial state is null for x & y"
+              loc: [4, 9],
+              note: "initial state"
             },
             {
-              loc: [7, 8],
+              loc: [11, 12],
               note: "first mount = hook for WebGazer setup"
             },
             {
-              loc: [8, 22],
-              note: "same simple setup"
+              loc: [13, 30],
+              note: "set the gaze listener"
             },
             {
-              loc: [15, 19],
+              loc: [23, 28],
               note: "but for one difference"
             },
             {
-              loc: [24, 28],
-              note: "render the position"
+              loc: [41, 47],
+              note: "render the state"
             }
           ]}
         />
@@ -655,7 +572,7 @@ export default class Presentation extends React.Component {
           code={require("raw-loader!../assets/code/webgazer-react-2.example")}
           ranges={[
             { loc: [0, 0], title: "clean up!" },
-            { loc: [24, 27], note: "remove listener & end webcam session" }
+            { loc: [33, 36], note: "remove listener & end webcam session" }
           ]}
         />
         <CodeSlide
@@ -664,15 +581,15 @@ export default class Presentation extends React.Component {
           ranges={[
             { loc: [0, 0], title: ".showPredictionPoints()" },
             {
-              loc: [8, 23]
+              loc: [12, 32]
             },
             {
-              loc: [21, 22],
+              loc: [30, 31],
               note: "pass `true` to showPredictionPoints()"
             },
             {
-              loc: [26, 30],
-              ontoe: "pass `false` to cleanup"
+              loc: [35, 39],
+              note: "pass `false` to cleanup"
             }
           ]}
         />
@@ -768,6 +685,15 @@ export default class Presentation extends React.Component {
             }
           ]}
         />
+        <Slide bgColor="quartenary">
+          <Text lineHeight={1.5} textColor="secondary">
+            <S type="italic">partner-less</S>
+            <br />partner-assisted scanning
+          </Text>
+          <Heading fit lineHeight={1.5} textColor="secondary">
+            implementation (code)
+          </Heading>
+        </Slide>
       </Deck>
     );
   }

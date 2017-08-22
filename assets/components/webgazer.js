@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 
 /* eslint-disable no-undef */
 
@@ -9,7 +10,7 @@ class WebGazer extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { x: null, y: null };
+    this.state = { blinked: false, x: null, y: null };
   }
 
   componentDidMount() {
@@ -21,7 +22,9 @@ class WebGazer extends React.Component {
           return;
         }
         const { x, y } = data;
+        const blinked = _.get(data, ["all", 0, "blinked"], false);
         this.setState(() => ({
+          blinked,
           x,
           y
         }));
@@ -35,9 +38,14 @@ class WebGazer extends React.Component {
   }
 
   render() {
+    const { blinked, x, y } = this.state;
     return (
-      <div style={{ fontSize: "10rem" }}>{`[${this.state.x}, ${this.state
-        .y}]`}</div>
+      <div style={{ fontSize: "7.5rem" }}>
+        <div>{`[${x}, ${y}]`}</div>
+        <div>
+          {blinked ? "blinked!" : "(nothing)"}
+        </div>
+      </div>
     );
   }
 }
