@@ -280,7 +280,6 @@ export default class Presentation extends React.Component {
               You survive, but you survive with what is so aptly known as
               “locked-in syndrome.”
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide bgColor="secondary">
@@ -289,7 +288,6 @@ export default class Presentation extends React.Component {
               Paralyzed from head to toe, the patient, his mind intact, is
               imprisoned inside his own body, unable to speak or move.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide bgColor="secondary">
@@ -298,7 +296,6 @@ export default class Presentation extends React.Component {
               In my case, blinking my left eyelid is my only means of
               communication.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide bgColor="quartenary">
@@ -309,7 +306,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="secondary">
           <BlockQuote>
             <Quote textColor="primary">It is a simple enough system.</Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -321,7 +317,6 @@ export default class Presentation extends React.Component {
               You read off the alphabet (ESA version, not ABC) until, with a
               blink of my eye, I stop you at the letter to be noted.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -346,7 +341,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Nervous visitors come most quickly to grief.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -357,7 +351,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Reticent people are much more difficult.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -368,7 +361,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Meticulous people never go wrong...
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -391,7 +383,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Nothing was missing, except me. I was elsewhere.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
