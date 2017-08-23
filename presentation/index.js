@@ -174,17 +174,6 @@ export default class Presentation extends React.Component {
               (a treadmill)
             </Heading>
           </Appear>
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="https://www.flickr.com/photos/29638108@N06/5618665304/in/faves-134718242@N08/"
-              target="_blank"
-              textColor="white"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: 0 }}
-            >
-              Image by Jennifer C. (CC BY 2.0)
-            </Link>
-          </div>
         </Slide>
         <Slide
           style={{
@@ -194,19 +183,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
-            >
-              Image via the BBC
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide
           style={{
             backgroundColor: "#e5d8c6",
@@ -215,19 +192,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
-            >
-              Image via the BBC
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide
           style={{
             backgroundColor: "#e5d8c6",
@@ -236,19 +201,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
-            >
-              Image via the BBC
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide
           style={{
             backgroundColor: "#e5d8c6",
@@ -257,19 +210,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="https://www.flickr.com/photos/rpsmithbarney/4266533201/in/faves-134718242@N08/"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "0" }}
-            >
-              Public domain image via the Preston Digital Archive
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide bgImage={images.benLomond} />
         <Slide bgImage={images.treadmill}>
           <Heading
@@ -281,17 +222,6 @@ export default class Presentation extends React.Component {
           >
             (a treadmill)
           </Heading>
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="https://www.flickr.com/photos/29638108@N06/5618665304/in/faves-134718242@N08/"
-              target="_blank"
-              textColor="white"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: 0 }}
-            >
-              Image by Jennifer C. (CC BY 2.0)
-            </Link>
-          </div>
         </Slide>
         <Slide bgImage={images.okGoTreadmill} />
         <Slide>
@@ -311,19 +241,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
-            >
-              Image via the BBC
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide>
           <Heading fit>technologies have</Heading>
           <Heading fit>histories</Heading>
@@ -363,7 +281,6 @@ export default class Presentation extends React.Component {
               You survive, but you survive with what is so aptly known as
               “locked-in syndrome.”
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide bgColor="secondary">
@@ -372,7 +289,6 @@ export default class Presentation extends React.Component {
               Paralyzed from head to toe, the patient, his mind intact, is
               imprisoned inside his own body, unable to speak or move.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide bgColor="secondary">
@@ -381,7 +297,6 @@ export default class Presentation extends React.Component {
               In my case, blinking my left eyelid is my only means of
               communication.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide bgColor="quartenary">
@@ -392,7 +307,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="secondary">
           <BlockQuote>
             <Quote textColor="primary">It is a simple enough system.</Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -401,10 +315,9 @@ export default class Presentation extends React.Component {
         >
           <BlockQuote>
             <Quote textColor="primary">
-              You read off the alphabet (ETA version, not ABC) until, with a
+              You read off the alphabet (ESA version, not ABC) until, with a
               blink of my eye, I stop you at the letter to be noted.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -429,7 +342,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Nervous visitors come most quickly to grief.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -440,7 +352,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Reticent people are much more difficult.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -451,7 +362,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Meticulous people never go wrong...
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -474,7 +384,6 @@ export default class Presentation extends React.Component {
             <Quote textColor="primary">
               Nothing was missing, except me. I was elsewhere.
             </Quote>
-            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
         <Slide
@@ -590,15 +499,7 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading fit>🤔 WebGazer + React...?? 🤔</Heading>
         </Slide>
-        <Slide
-          bgImage={images.catHuggingStuffy}
-          style={{
-            backgroundImage: `url(${images.xcoffee})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        >
+        <Slide bgImage={images.catHuggingStuffy}>
           <Heading fit textColor="primary">
             the lifecycle is your
           </Heading>
@@ -674,19 +575,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Text>1️⃣ display the frequency-ordered alphabet for reference</Text>
         </Slide>
-        <Slide bgImage={images.esaReference}>
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="https://commons.wikimedia.org/w/index.php?curid=5459869"
-              target="_blank"
-              textColor="primary"
-              textSize="0.5em"
-              style={{ position: "fixed", top: "1rem", right: "0" }}
-            >
-              Image from <em>The Diving Bell &amp; The Butterfly</em> (Fair Use)
-            </Link>
-          </div>
-        </Slide>
+        <Slide bgImage={images.esaReference} />
         <Slide bgColor="secondary" textColor="primary">
           <Heading fit lineHeight={1.5}>
             English frequency-ordered alphabet
@@ -822,7 +711,15 @@ export default class Presentation extends React.Component {
             }
           ]}
         />
-        <Slide bgImage={images.hi} />
+        <Slide
+          style={{
+            backgroundColor: themeColors.primary,
+            backgroundImage: `url(${images.hi})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
         <Slide
           style={{
             backgroundColor: "#e5d8c6",
@@ -831,19 +728,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
-            >
-              Image via the BBC
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide
           bgColor="tertiary"
           style={{
@@ -852,19 +737,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="https://commons.wikimedia.org/wiki/File:Webcam000c1.jpg"
-              target="_blank"
-              textColor="secondary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "5rem" }}
-            >
-              Public domain image via the Wikimedia Commons
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide
           bgColor="tertiary"
           style={{
@@ -900,19 +773,7 @@ export default class Presentation extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "auto 80%"
           }}
-        >
-          <div style={{ height: "100vh", width: "100vw" }}>
-            <Link
-              href="http://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
-              target="_blank"
-              textColor="quartenary"
-              textSize="0.5em"
-              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
-            >
-              "The Trojan Room Coffee Pot Biography"
-            </Link>
-          </div>
-        </Slide>
+        />
         <Slide bgColor="tertiary">
           <Layout style={{ alignItems: "center" }}>
             <Fill>
@@ -954,9 +815,123 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading fit>References &amp; Resources</Heading>
+          <List>
+            <ListItem>
+              <Link
+                href="https://github.com/jebeck/diving-bell"
+                target="_blank"
+              >
+                divingbell.io code on GitHub
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
+                target="_blank"
+              >
+                "The Dark History of the Treadmill"
+              </Link>
+            </ListItem>
+            <ListItem>
+              The Trojan Room Coffee Machine
+              <List>
+                <ListItem style={{ paddingLeft: "4rem" }}>
+                  <Link
+                    href="https://www.cl.cam.ac.uk/coffee/coffee.html"
+                    target="_blank"
+                  >
+                    main site
+                  </Link>
+                </ListItem>
+                <ListItem style={{ paddingLeft: "4rem" }}>
+                  <Link
+                    href="https://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
+                    target="_blank"
+                  >
+                    "biography"
+                  </Link>
+                </ListItem>
+              </List>
+            </ListItem>
+          </List>
         </Slide>
         <Slide>
           <Heading>Image credits</Heading>
+          <List>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="https://www.flickr.com/photos/29638108@N06/5618665304/in/faves-134718242@N08/"
+                target="_blank"
+              >
+                Modern treadmill image by Jennifer C. (CC BY 2.0)
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
+                target="_blank"
+              >
+                Brixton prison treadmill etching via the BBC
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
+                target="_blank"
+              >
+                William Cubitt image via the BBC
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="https://www.flickr.com/photos/rpsmithbarney/4266533201/in/faves-134718242@N08/"
+                target="_blank"
+              >
+                Preston prison treadmill: public domain via the Preston Digital
+                Archive
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="https://www.flickr.com/photos/8810508@N06/7239324110/in/faves-134718242@N08/"
+                target="_blank"
+              >
+                Moon picture by hharryus (CC BY 2.0)
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="https://commons.wikimedia.org/wiki/File:Alexander_the_Great_diving_NOAA.jpg"
+                target="_blank"
+              >
+                Ancient diving bell illustration via Wikimedia Commons
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="https://commons.wikimedia.org/w/index.php?curid=5459869"
+                target="_blank"
+              >
+                Image from <em>The Diving Bell &amp; The Butterfly</em>
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="https://commons.wikimedia.org/wiki/File:Webcam000c1.jpg"
+                target="_blank"
+              >
+                Early 2000s webcam: public domain image via Wikimedia Commons
+              </Link>
+            </ListItem>
+            <ListItem textSize="1.5rem">
+              <Link
+                href="http://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
+                target="_blank"
+              >
+                First webcam image from "The Trojan Room Coffee Pot Biography"
+              </Link>
+            </ListItem>
+          </List>
         </Slide>
       </Deck>
     );
