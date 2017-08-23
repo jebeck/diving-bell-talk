@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+<div id="Scanner">
+  <CurrentLetter/>
+  <FreqOrderedAlphabet/>
+  <SelectedLetters/>
+  <button>Start</button>
+  <button>Pause</button>
+  <button>Reset</button>
+  <LetterSelector/>
+</div>
+
+
+
+
+
+
+

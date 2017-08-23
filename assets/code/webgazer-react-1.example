@@ -3,7 +3,7 @@ class WebGazer extends React.Component {
     super(props);
 
     this.state = {
-      blinked: false,
+      blinks: 0,
       x: null,
       y: null
     };
@@ -21,29 +21,30 @@ class WebGazer extends React.Component {
             data,
             "blinked"
           );
-          this.setState(() => ({
-            blinked,
-            x,
-            y
-          }));
+          this.setState(state => {
+            const { blinks } = state;
+            return {
+              blinks: blinked
+                ? blinks + 1
+                : blinks,
+              x,
+              y
+            };
+          });
         }
       )
       .begin();
   }
 
   render() {
-    const {
-      blinked,
-      x,
-      y
-    } = this.state;
+    const { blinks, x, y } = this.state;
     return (
       <div>
         <div>{`[${x}, ${y}]`}</div>
         <div>
-          {blinked
-            ? "blinked!"
-            : "(nothing)"}
+          {blinks > 0
+            ? "blinked at least once!"
+            : "no blinks"}
         </div>
       </div>
     );

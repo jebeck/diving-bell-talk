@@ -1,0 +1,30 @@
+class LetterSelector extends React.Component {
+  componentDidMount() {
+    webgazer.setGazeListener(data => {
+      if (data != null) {
+        const twoBlinksOnLet = _.magic(data);
+        if (twoBlinksOnLet) {
+          this.selectLetter();
+        }
+      }
+    });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { started: willStart } = nextProps;
+    const { started } = this.props;
+    if (!started && willStart) {
+      webgazer.resume();
+    } else if (started && !willStart) {
+      webgazer.pause();
+    }
+  }
+
+  componentWillUnmount() {
+    webgazer.clearGazeListener().pause();
+  }
+
+  render() {
+    return null;
+  }
+}

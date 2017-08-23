@@ -3,7 +3,7 @@ class WebGazer extends React.Component {
     super(props);
 
     this.state = {
-      blinked: false,
+      blinks: 0,
       x: null,
       y: null
     };
@@ -11,23 +11,7 @@ class WebGazer extends React.Component {
 
   componentDidMount() {
     webgazer
-      .setGazeListener(
-        (data, elapsedTime) => {
-          if (data == null) {
-            return;
-          }
-          const { x, y } = data;
-          const blinked = _.magic(
-            data,
-            "blinked"
-          );
-          this.setState(() => ({
-            blinked,
-            x,
-            y
-          }));
-        }
-      )
+      .setGazeListener(callback)
       .showPredictionPoints(true)
       .begin();
   }
@@ -40,18 +24,14 @@ class WebGazer extends React.Component {
   }
 
   render() {
-    const {
-      blinked,
-      x,
-      y
-    } = this.state;
+    const { blinks, x, y } = this.state;
     return (
       <div>
         <div>{`[${x}, ${y}]`}</div>
         <div>
-          {blinked
-            ? "blinked!"
-            : "(nothing)"}
+          {blinks > 0
+            ? "blinked at least once!"
+            : "no blinks"}
         </div>
       </div>
     );

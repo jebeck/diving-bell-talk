@@ -14,6 +14,8 @@ import {
   Image,
   Layout,
   Link,
+  List,
+  ListItem,
   Quote,
   S,
   Slide,
@@ -35,17 +37,20 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-  benLomond: require("../assets/images/ben-lomond.jpg"),
+  benLomond: require("../assets/images/ben-lomond.png"),
   bestCoverWebcam2: require("../assets/images/best-cover-webcam2.png"),
   blinkUISketch: require("../assets/images/blink-UI-sketch.png"),
   brixtonTreadmill: require("../assets/images/treadmill-Brixton-prison.jpg"),
   catHuggingStuffy: require("../assets/images/cat-hugging-stuffy.gif"),
   chatroulette: require("../assets/images/chatroulette.png"),
+  divingBell: require("../assets/images/diving-bell.jpg"),
   divingBellLanding: require("../assets/images/diving-bell-landing.png"),
   esaReference: require("../assets/images/ESA-reference.jpg"),
+  hi: require("../assets/images/hi.gif"),
   jdbDictating: require("../assets/images/jdb-dictating.jpg"),
   jdbWithKids: require("../assets/images/jdb-with-kids.jpg"),
   lucilleBluthWink: require("../assets/images/lucille-bluth-wink.gif"),
+  moon: require("../assets/images/moon.jpg"),
   okGoTreadmill: require("../assets/images/ok-go-treadmill.gif"),
   oscarWilde: require("../assets/images/oscar-wilde.jpg"),
   prestonTreadmill: require("../assets/images/treadmill-Preston-prison.jpg"),
@@ -264,15 +269,7 @@ export default class Presentation extends React.Component {
             </Link>
           </div>
         </Slide>
-        <Slide
-          style={{
-            backgroundColor: "#e5d8c6",
-            backgroundImage: `url(${images.benLomond})`,
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
-          }}
-        />
+        <Slide bgImage={images.benLomond} />
         <Slide bgImage={images.treadmill}>
           <Heading
             bgColor="rgba(255,255,255,0.6666666667)"
@@ -342,6 +339,12 @@ export default class Presentation extends React.Component {
           <Heading fit>definitive</Heading>
         </Slide>
         <Slide>
+          <Appear>
+            <Text textColor="tertiary">(yes, I know this is blank)</Text>
+          </Appear>
+        </Slide>
+        <Slide />
+        <Slide>
           <Image src={images.jdbWithKids} width="75%" />
           <Heading fit size={3}>
             Jean-Dominique Bauby
@@ -391,7 +394,10 @@ export default class Presentation extends React.Component {
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide
+          bgColor="secondary"
+          notes="You read off the alphabet (ESA version, not ABC) until, with a blink of my eye, I stop you at the letter to be noted. The maneuver is repeated for the letters that follow, so that fairly soon you have a whole word, and then fragments of more or less intelligible sentences. That, at least, is the theory."
+        >
           <BlockQuote>
             <Quote textColor="primary">
               You read off the alphabet (ETA version, not ABC) until, with a
@@ -400,7 +406,11 @@ export default class Presentation extends React.Component {
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
         </Slide>
-        <Slide bgColor="secondary" textColor="primary">
+        <Slide
+          bgColor="secondary"
+          notes="'The jumbled appearance of my chorus line,' he wrote, 'stems not from chance but from cunning calculation. More than an alphabet, it is a hit parade in which each letter is placed according to the frequency of its use in the French language.'"
+          textColor="primary"
+        >
           <Heading fit lineHeight={1.5}>
             French frequency-ordered alphabet
           </Heading>
@@ -410,13 +420,74 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide
+          bgColor="secondary"
+          notes="Nervous visitors come most quickly to grief. They reel off the alphabet tonelessly, at top speed, jotting down letters almost at random; and then, seeing the meaningless result, exclaim, “I’m an idiot!” But in the final analysis, their anxiety gives me a chance to rest, for they take charge of the whole conversation, providing both questions and answers, and I am spared the task of holding up my end."
+        >
           <BlockQuote>
             <Quote textColor="primary">
               Nervous visitors come most quickly to grief.
             </Quote>
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
           </BlockQuote>
+        </Slide>
+        <Slide
+          bgColor="secondary"
+          notes="Reticent people are much more difficult. If I ask them, “How are you?” they answer, “Fine,” immediately putting the ball back in my court. With some, the alphabet becomes an artillery barrage, and I need to have two or three questions ready in advance in order not to be swamped."
+        >
+          <BlockQuote>
+            <Quote textColor="primary">
+              Reticent people are much more difficult.
+            </Quote>
+            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide
+          bgColor="secondary"
+          notes="Meticulous people never go wrong: they scrupulously note down each letter and never seek to unravel the mystery of a sentence before it is complete. Nor would they dream of completing a single word for you. Unwilling to chance the smallest error, they will never take it upon themselves to provide the “room” that follows “mush,” the “ic” that follows “atom,” or the “nable” without which neither “intermi” nor “abomi” can exist. Such scrupulousness makes for laborious progress, but at least you avoid the misunderstandings in which impulsive visitors bog down when they neglect to verify their intuitions."
+        >
+          <BlockQuote>
+            <Quote textColor="primary">
+              Meticulous people never go wrong...
+            </Quote>
+            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide
+          bgImage={images.moon}
+          notes="Yet I understood the poetry of such mind games one day when, attempting to ask for my glasses (lunettes), I was asked what I wanted to do with the moon (lune)."
+        />
+        <Slide bgColor="secondary">
+          <Heading fit textColor="primary">
+            <S type="italic">The Diving Bell and the Butterfly</S>
+          </Heading>
+        </Slide>
+        <Slide
+          bgColor="secondary"
+          notes="The treetops foaming like surf against glass building fronts, wisps of cloud in the sky. Nothing was missing, except me. I was elsewhere."
+        >
+          <Heading size={2} textColor="quartenary">
+            (the butterfly)
+          </Heading>
+          <BlockQuote>
+            <Quote textColor="primary">
+              Nothing was missing, except me. I was elsewhere.
+            </Quote>
+            <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide
+          notes="The identity badge pinned to Sandrine’s white tunic says “Speech Therapist,” but it should read “Guardian Angel.” Quite apart from the practical drawbacks, this inability to communicate is somewhat wearing. Which explains the gratification I feel twice daily when Sandrine knocks, pokes her small chipmunk face through the door, and at once sends all gloomy thoughts packing. The invisible and eternally imprisoning diving bell seems less oppressive."
+          style={{
+            backgroundImage: `url(${images.divingBell})`,
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover"
+          }}
+        >
+          <Heading size={2} style={{ marginTop: "-18rem" }} textColor="primary">
+            (the diving bell)
+          </Heading>
         </Slide>
         <Slide
           style={{
@@ -431,9 +502,7 @@ export default class Presentation extends React.Component {
             <S type="italic">partner-less</S>
             <br />partner-assisted scanning
           </Heading>
-          <Appear>
-            <Heading>(😮)</Heading>
-          </Appear>
+          <Heading>(😮)</Heading>
         </Slide>
         <Slide bgImage={images.lucilleBluthWink} />
         <Slide
@@ -518,7 +587,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide>
-          <Heading fit>🕴️ WebGazer + React...?? 🕴️</Heading>
+          <Heading fit>🤔 WebGazer + React...?? 🤔</Heading>
         </Slide>
         <Slide
           bgImage={images.catHuggingStuffy}
@@ -551,15 +620,15 @@ export default class Presentation extends React.Component {
               note: "first mount = hook for WebGazer setup"
             },
             {
-              loc: [13, 30],
-              note: "set the gaze listener"
+              loc: [23, 33],
+              note: "setState in callback"
             },
             {
-              loc: [23, 28],
-              note: "but for one difference"
+              loc: [19, 23],
+              note: "hand-waving 👋"
             },
             {
-              loc: [41, 47],
+              loc: [42, 48],
               note: "render the state"
             }
           ]}
@@ -572,7 +641,7 @@ export default class Presentation extends React.Component {
           code={require("raw-loader!../assets/code/webgazer-react-2.example")}
           ranges={[
             { loc: [0, 0], title: "clean up!" },
-            { loc: [33, 36], note: "remove listener & end webcam session" }
+            { loc: [38, 41], note: "remove listener & end webcam session" }
           ]}
         />
         <CodeSlide
@@ -581,14 +650,11 @@ export default class Presentation extends React.Component {
           ranges={[
             { loc: [0, 0], title: ".showPredictionPoints()" },
             {
-              loc: [12, 32]
-            },
-            {
-              loc: [30, 31],
+              loc: [11, 17],
               note: "pass `true` to showPredictionPoints()"
             },
             {
-              loc: [35, 39],
+              loc: [18, 24],
               note: "pass `false` to cleanup"
             }
           ]}
@@ -659,6 +725,7 @@ export default class Presentation extends React.Component {
           code={require("raw-loader!../assets/code/scanner-react-1.example")}
           ranges={[
             { loc: [0, 0], title: "React sketch: Scanner" },
+            { loc: [0, 1] },
             {
               loc: [33, 36],
               note: "(default) props: freq-ordered alphabet"
@@ -666,10 +733,6 @@ export default class Presentation extends React.Component {
             {
               loc: [4, 8],
               note: "state: currentLetter & selectedLetter"
-            },
-            {
-              loc: [10, 31],
-              note: "entire render"
             },
             {
               loc: [18, 21],
@@ -693,6 +756,210 @@ export default class Presentation extends React.Component {
           <Heading fit lineHeight={1.5} textColor="secondary">
             implementation (code)
           </Heading>
+        </Slide>
+        <Slide>
+          <Heading fit>looping through letters implies...</Heading>
+          <Appear>
+            <List>
+              <ListItem>start</ListItem>
+              <ListItem>pause</ListItem>
+              <ListItem>reset</ListItem>
+            </List>
+          </Appear>
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/scanner-react-2.example")}
+          ranges={[
+            { loc: [0, 0], title: "Scanner: (pseudo-ish) code" },
+            { loc: [4, 10], note: "initial state" },
+            { loc: [64, 73], note: "now with buttons! 🔘" },
+            { loc: [30, 35], note: "start 1: set currentLetter and started" },
+            {
+              loc: [35, 41],
+              note: "start 2: set interval to loop through letters"
+            },
+            { loc: [12, 18], note: "pause: set started to false" },
+            { loc: [19, 28], note: "reset: all state back to initial values" }
+          ]}
+        />
+        <CodeSlide
+          lang="html"
+          code={require("raw-loader!../assets/code/scanner-components.example")}
+          ranges={[
+            { loc: [7, 16], note: "Scanner: components" },
+            { loc: [14, 15] }
+          ]}
+          showLineNumbers={false}
+        />
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/scanner-react-3.example")}
+          ranges={[
+            { loc: [0, 0], title: "Scanner: selectLetter" },
+            { loc: [29, 39] },
+            { loc: [31, 33], note: "reset currentIndex and currentLetter" },
+            { loc: [33, 37], note: "store selected letter" }
+          ]}
+        />
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/letterselector-react.example")}
+          ranges={[
+            { loc: [0, 0], title: "LetterSelector" },
+            {
+              loc: [1, 11],
+              note: "componentDidMount: set listener for double blinks"
+            },
+            {
+              loc: [12, 21],
+              note: "componentWillReceiveProps: pause & resume"
+            },
+            {
+              loc: [22, 25],
+              note: "componentWillUnmount: cleanup!"
+            },
+            {
+              loc: [26, 29],
+              note: "render nothing (all about lifecycle)"
+            }
+          ]}
+        />
+        <Slide bgImage={images.hi} />
+        <Slide
+          style={{
+            backgroundColor: "#e5d8c6",
+            backgroundImage: `url(${images.brixtonTreadmill})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        >
+          <div style={{ height: "100vh", width: "100vw" }}>
+            <Link
+              href="http://www.bbc.co.uk/programmes/articles/4w8bVrKRqQDP4fKl0b8XzdW/the-dark-history-of-the-treadmill"
+              target="_blank"
+              textColor="quartenary"
+              textSize="0.5em"
+              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
+            >
+              Image via the BBC
+            </Link>
+          </div>
+        </Slide>
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.webcam})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        >
+          <div style={{ height: "100vh", width: "100vw" }}>
+            <Link
+              href="https://commons.wikimedia.org/wiki/File:Webcam000c1.jpg"
+              target="_blank"
+              textColor="secondary"
+              textSize="0.5em"
+              style={{ position: "fixed", bottom: "1rem", left: "5rem" }}
+            >
+              Public domain image via the Wikimedia Commons
+            </Link>
+          </div>
+        </Slide>
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.chatroulette})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.telegraphTapeWebcam})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.bestCoverWebcam2})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <Slide
+          bgColor="tertiary"
+          style={{
+            backgroundImage: `url(${images.xcoffee})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "auto 80%"
+          }}
+        >
+          <div style={{ height: "100vh", width: "100vw" }}>
+            <Link
+              href="http://www.cl.cam.ac.uk/coffee/qsf/coffee.html"
+              target="_blank"
+              textColor="quartenary"
+              textSize="0.5em"
+              style={{ position: "fixed", bottom: "1rem", left: "-8rem" }}
+            >
+              "The Trojan Room Coffee Pot Biography"
+            </Link>
+          </div>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Layout style={{ alignItems: "center" }}>
+            <Fill>
+              <Image src={images.treadmill} width={400} />
+            </Fill>
+            <Heading size={3} textColor="primary">
+              &nbsp;vs.&nbsp;
+            </Heading>
+            <Fill>
+              <Image src={images.webcam} width={400} />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide>
+          <Heading fit>technologies have</Heading>
+          <Heading fit>histories</Heading>
+          <Heading>(and contexts)</Heading>
+        </Slide>
+        <Slide>
+          <Heading fit>but histories (and contexts)</Heading>
+          <Heading>
+            are{" "}
+            <S textColor="secondary" type="bold">
+              not
+            </S>
+          </Heading>
+          <Heading fit>definitive</Heading>
+        </Slide>
+        <Slide>
+          <Heading fit lineHeight={1.5}>
+            🙌 Thank you! 🙌
+          </Heading>
+          <Heading fit lineHeight={1.5}>
+            Try it yourself @
+          </Heading>
+          <Heading size={2}>
+            <Link href="https://divingbell.io">divingbell.io</Link>
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading fit>References &amp; Resources</Heading>
+        </Slide>
+        <Slide>
+          <Heading>Image credits</Heading>
         </Slide>
       </Deck>
     );

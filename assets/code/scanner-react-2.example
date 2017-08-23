@@ -1,0 +1,77 @@
+class Scanner extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentIndex: 0,
+      currentLetter: null,
+      selectedLetters: [],
+      started: false
+    };
+  }
+
+  pause = () => {
+    clearInterval(this.scanner);
+    this.setState(() => ({
+      started: false
+    }));
+  };
+
+  reset = () => {
+    clearInterval(this.scanner);
+    this.setState(() => ({
+      currentIndex: 0,
+      currentLetter: null,
+      selectedLetters: [],
+      started: false
+    }));
+  };
+
+  start = () => {
+    this.setState(
+      (state, props) => ({
+        // set first currentLetter
+        // started: true
+      }),
+      () => {
+        this.scanner = setInterval(
+          callback, // sets new currentLetter
+          this.props.scanningPace
+        );
+      }
+    );
+  };
+
+  render() {
+    const {
+      freqOrderedAlphabet: letters
+    } = this.props;
+    const {
+      currentLetter,
+      selectedLetters
+    } = this.state;
+    return (
+      <div>
+        <CurrentLetter
+          currentLetter={currentLetter}
+        />
+        <FreqOrderedAlphabet
+          currentLetter={currentLetter}
+          letters={letters}
+        />
+        <SelectedLetters
+          selected={selectedLetters}
+        />
+        <button onClick={this.start}>
+          Start
+        </button>
+        <button onClick={this.pause}>
+          Pause
+        </button>
+        <button onClick={this.reset}>
+          Reset
+        </button>
+      </div>
+    );
+  }
+}
