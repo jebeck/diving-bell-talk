@@ -400,7 +400,7 @@ export default class Presentation extends React.Component {
         >
           <BlockQuote>
             <Quote textColor="primary">
-              You read off the alphabet (ETA version, not ABC) until, with a
+              You read off the alphabet (ESA version, not ABC) until, with a
               blink of my eye, I stop you at the letter to be noted.
             </Quote>
             <Cite textColor="tertiary">Jean-Domnique Bauby</Cite>
