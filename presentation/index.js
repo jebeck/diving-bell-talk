@@ -714,7 +714,15 @@ export default class Presentation extends React.Component {
             }
           ]}
         />
-        <Slide bgImage={images.hi} />
+        <Slide
+          style={{
+            backgroundColor: themeColors.primary,
+            backgroundImage: `url(${images.hi})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
         <Slide
           style={{
             backgroundColor: "#e5d8c6",
