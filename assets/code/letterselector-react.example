@@ -2,9 +2,9 @@ class LetterSelector extends React.Component {
   componentDidMount() {
     webgazer.setGazeListener(data => {
       if (data != null) {
-        const twoBlinksOnLet = _.magic(data);
+        const twoBlinksOnLet = _.magic(data, this.props);
         if (twoBlinksOnLet) {
-          this.selectLetter();
+          this.props.selectLetter();
         }
       }
     });
