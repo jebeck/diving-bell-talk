@@ -135,7 +135,7 @@ export default class Presentation extends React.Component {
             </Link>
           </Heading>
         </Slide>
-        <Slide>
+        <Slide notes="<div>not talking about dataviz today</div><br/><div>talking about a side project, but first a little story</div>">
           <Heading lineHeight={1.5} size={2}>
             dataviz eng
           </Heading>
@@ -370,7 +370,10 @@ export default class Presentation extends React.Component {
           bgImage={images.moon}
           notes="Yet I understood the poetry of such mind games one day when, attempting to ask for my glasses (lunettes), I was asked what I wanted to do with the moon (lune)."
         />
-        <Slide bgColor="secondary">
+        <Slide
+          bgColor="secondary"
+          notes="the title The Diving Bell and the Butterfly is metaphorical"
+        >
           <Heading fit textColor="primary">
             <S type="italic">The Diving Bell and the Butterfly</S>
           </Heading>
@@ -389,7 +392,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
         <Slide
-          notes="<div>(explain what a diving bell is)</div><br/><div>The identity badge pinned to Sandrine’s white tunic says “Speech Therapist,” but it should read “Guardian Angel.” Quite apart from the practical drawbacks, this inability to communicate is somewhat wearing. Which explains the gratification I feel twice daily when Sandrine knocks, pokes her small chipmunk face through the door, and at once sends all gloomy thoughts packing. The invisible and eternally imprisoning diving bell seems less oppressive.</div><br/><div>story of how I watched the film</div>"
+          notes="<div>(explain what a diving bell is)</div><br/><div>In his memoirs, Bauby described his diving bell directly: 'The identity badge pinned to Sandrine’s white tunic says “Speech Therapist,” but it should read “Guardian Angel.” When Sandrine knocks and pokes her small chipmunk face through the door, at once it sends all gloomy thoughts packing. The invisible and eternally imprisoning diving bell seems less oppressive.'</div><br/><div>story of how I watched the film</div>"
           style={{
             backgroundImage: `url(${images.divingBell})`,
             backgroundPosition: "center bottom",
@@ -409,7 +412,10 @@ export default class Presentation extends React.Component {
             backgroundSize: "contain"
           }}
         />
-        <Slide bgColor="quartenary">
+        <Slide
+          bgColor="quartenary"
+          notes="My app uses blinking to select a letter, but I've built it for blinking with two eyes even though Bauby had to use only his left, because not all of us are equally gifted in the winking department"
+        >
           <Heading size={3}>😮&nbsp;&nbsp;😮&nbsp;&nbsp;😮</Heading>
           <Heading fit lineHeight={2} textColor="secondary">
             <S type="italic">partner-less</S>
