@@ -291,7 +291,10 @@ export default class Presentation extends React.Component {
             </Quote>
           </BlockQuote>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide
+          bgColor="secondary"
+          notes="By blinking his left eye many *many* times, Bauby dictated his memoirs, published as *The Diving Bell & the Butterfly*. He died of pneumonia—suddenly and tragically—only two days after the book was published."
+        >
           <BlockQuote>
             <Quote textColor="primary">
               In my case, blinking my left eyelid is my only means of
@@ -387,7 +390,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
         <Slide
-          notes="The identity badge pinned to Sandrine’s white tunic says “Speech Therapist,” but it should read “Guardian Angel.” Quite apart from the practical drawbacks, this inability to communicate is somewhat wearing. Which explains the gratification I feel twice daily when Sandrine knocks, pokes her small chipmunk face through the door, and at once sends all gloomy thoughts packing. The invisible and eternally imprisoning diving bell seems less oppressive."
+          notes="<div>(explain what a diving bell is)</div><br/><div>The identity badge pinned to Sandrine’s white tunic says “Speech Therapist,” but it should read “Guardian Angel.” Quite apart from the practical drawbacks, this inability to communicate is somewhat wearing. Which explains the gratification I feel twice daily when Sandrine knocks, pokes her small chipmunk face through the door, and at once sends all gloomy thoughts packing. The invisible and eternally imprisoning diving bell seems less oppressive.</div><br/><div>story of how I watched the film</div>"
           style={{
             backgroundImage: `url(${images.divingBell})`,
             backgroundPosition: "center bottom",
@@ -408,11 +411,12 @@ export default class Presentation extends React.Component {
           }}
         />
         <Slide bgColor="quartenary">
-          <Heading fit lineHeight={1.5} textColor="secondary">
+          <Heading size={3}>😮&nbsp;&nbsp;😮&nbsp;&nbsp;😮</Heading>
+          <Heading fit lineHeight={2} textColor="secondary">
             <S type="italic">partner-less</S>
             <br />partner-assisted scanning
           </Heading>
-          <Heading>(😮)</Heading>
+          <Heading size={3}>😮&nbsp;&nbsp;😮&nbsp;&nbsp;😮</Heading>
         </Slide>
         <Slide bgImage={images.lucilleBluthWink} />
         <Slide
@@ -698,6 +702,14 @@ export default class Presentation extends React.Component {
               note: "componentDidMount: set listener for double blinks"
             },
             {
+              loc: [4, 5],
+              note: "hand-waving 👋"
+            },
+            {
+              loc: [5, 8],
+              note: "select the letter"
+            },
+            {
               loc: [12, 21],
               note: "componentWillReceiveProps: pause & resume"
             },
@@ -803,17 +815,6 @@ export default class Presentation extends React.Component {
           <Heading fit>definitive</Heading>
         </Slide>
         <Slide>
-          <Heading fit lineHeight={1.5}>
-            🙌 Thank you! 🙌
-          </Heading>
-          <Heading fit lineHeight={1.5}>
-            Try it yourself @
-          </Heading>
-          <Heading size={2}>
-            <Link href="https://divingbell.io">divingbell.io</Link>
-          </Heading>
-        </Slide>
-        <Slide>
           <Heading fit>References &amp; Resources</Heading>
           <List>
             <ListItem>
@@ -854,6 +855,17 @@ export default class Presentation extends React.Component {
               </List>
             </ListItem>
           </List>
+        </Slide>
+        <Slide>
+          <Heading fit lineHeight={1.5}>
+            🙌 Thank you! 🙌
+          </Heading>
+          <Heading fit lineHeight={1.5}>
+            Try it yourself @
+          </Heading>
+          <Heading size={2}>
+            <Link href="https://divingbell.io">divingbell.io</Link>
+          </Heading>
         </Slide>
         <Slide>
           <Heading>Image credits</Heading>
