@@ -453,24 +453,6 @@ export default class Presentation extends React.Component {
           ]}
         />
         <Slide>
-          <Heading fit>🤔 WebGazer + React...?? 🤔</Heading>
-        </Slide>
-        <CodeSlide
-          lang="js"
-          code={require("raw-loader!../assets/code/webgazer-via-index.example")}
-          ranges={[
-            { loc: [0, 0], title: "load via index.html" },
-            {
-              loc: [8, 12],
-              note: "late execution for WebGL"
-            },
-            {
-              loc: [3, 7],
-              note: "💰💰💰 data processing in Web Worker "
-            }
-          ]}
-        />
-        <Slide>
           <Heading fit lineHeight={1.25}>
             {shuffle([
               "👷‍♀️",
@@ -503,17 +485,6 @@ export default class Presentation extends React.Component {
               "👷🏾",
               "👷🏿"
             ]).join("")}
-          </Heading>
-        </Slide>
-        <Slide>
-          <Heading fit>🤔 WebGazer + React...?? 🤔</Heading>
-        </Slide>
-        <Slide bgImage={images.catHuggingStuffy}>
-          <Heading fit textColor="primary">
-            the lifecycle is your
-          </Heading>
-          <Heading fit textColor="primary">
-            friend
           </Heading>
         </Slide>
         <CodeSlide
@@ -623,7 +594,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/code/scanner-react-1.example")}
           ranges={[
-            { loc: [0, 0], title: "React sketch: Scanner" },
+            { loc: [0, 0], title: "implementation sketch" },
             { loc: [0, 1] },
             {
               loc: [33, 36],
@@ -656,82 +627,6 @@ export default class Presentation extends React.Component {
             implementation (code)
           </Heading>
         </Slide>
-        <Slide>
-          <Heading fit>looping through letters implies...</Heading>
-          <Appear>
-            <List>
-              <ListItem>start</ListItem>
-              <ListItem>pause</ListItem>
-              <ListItem>reset</ListItem>
-            </List>
-          </Appear>
-        </Slide>
-        <CodeSlide
-          lang="js"
-          code={require("raw-loader!../assets/code/scanner-react-2.example")}
-          ranges={[
-            { loc: [0, 0], title: "Scanner: (pseudo-ish) code" },
-            { loc: [4, 10], note: "initial state" },
-            { loc: [64, 73], note: "now with buttons! 🔘" },
-            { loc: [30, 35], note: "start 1: set currentLetter and started" },
-            {
-              loc: [35, 41],
-              note: "start 2: set interval to loop through letters"
-            },
-            { loc: [12, 18], note: "pause: set started to false" },
-            { loc: [19, 28], note: "reset: all state back to initial values" }
-          ]}
-        />
-        <CodeSlide
-          lang="html"
-          code={require("raw-loader!../assets/code/scanner-components.example")}
-          ranges={[
-            { loc: [7, 16], note: "Scanner: components" },
-            { loc: [14, 15] }
-          ]}
-          showLineNumbers={false}
-        />
-        <CodeSlide
-          lang="js"
-          code={require("raw-loader!../assets/code/scanner-react-3.example")}
-          ranges={[
-            { loc: [0, 0], title: "Scanner: selectLetter" },
-            { loc: [29, 39] },
-            { loc: [31, 33], note: "reset currentIndex and currentLetter" },
-            { loc: [33, 37], note: "store selected letter" }
-          ]}
-        />
-        <CodeSlide
-          lang="js"
-          code={require("raw-loader!../assets/code/letterselector-react.example")}
-          ranges={[
-            { loc: [0, 0], title: "LetterSelector" },
-            {
-              loc: [1, 11],
-              note: "componentDidMount: set listener for double blinks"
-            },
-            {
-              loc: [4, 5],
-              note: "hand-waving 👋"
-            },
-            {
-              loc: [5, 8],
-              note: "select the letter"
-            },
-            {
-              loc: [12, 21],
-              note: "componentWillReceiveProps: pause & resume"
-            },
-            {
-              loc: [22, 25],
-              note: "componentWillUnmount: cleanup!"
-            },
-            {
-              loc: [26, 29],
-              note: "render nothing (all about lifecycle)"
-            }
-          ]}
-        />
         <Slide
           style={{
             backgroundColor: themeColors.primary,
