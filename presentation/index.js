@@ -84,7 +84,7 @@ export default class Presentation extends React.Component {
       >
         <Slide>
           <Heading fit size={1} lineHeight={2}>
-            React-ing htmlFor=empathy
+            escaping the diving bell
           </Heading>
         </Slide>
         <Slide textSize="2.5rem">
