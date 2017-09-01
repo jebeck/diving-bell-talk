@@ -131,7 +131,7 @@ FreqOrderedLetters.propTypes = {
     en: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     fr: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   }).isRequired,
-  locale: React.PropTypes.oneOf(["en", "fr"]).isRequired
+  locale: React.PropTypes.oneOf(["de", "en", "fr"]).isRequired
 };
 
 export default FreqOrderedLetters;
