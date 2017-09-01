@@ -1,0 +1,16 @@
+wg.reg.RidgeRegThreaded.prototype.predict =
+  function(eyesObj) {
+    if (!eyesObj) {
+      return null;
+    }
+
+    /* irrevelant */
+
+    return {
+      blinked:
+        eyesObj.left.blink &&
+        eyesObj.right.blink,
+      x: predictedX,
+      y: predictedY
+    };
+  };

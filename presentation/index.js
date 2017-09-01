@@ -1,13 +1,11 @@
 // Import React
 import React from "react";
 import CodeSlide from "spectacle-code-slide";
-import shuffle from "shuffle-array";
 
 // Import Spectacle Core tags
 import {
   Appear,
   BlockQuote,
-  Cite,
   Deck,
   Fill,
   Heading,
@@ -41,18 +39,16 @@ const images = {
   bestCoverWebcam2: require("../assets/images/best-cover-webcam2.png"),
   blinkUISketch: require("../assets/images/blink-UI-sketch.png"),
   brixtonTreadmill: require("../assets/images/treadmill-Brixton-prison.jpg"),
-  catHuggingStuffy: require("../assets/images/cat-hugging-stuffy.gif"),
   chatroulette: require("../assets/images/chatroulette.png"),
+  diveIn: require("../assets/images/dive-in.gif"),
   divingBell: require("../assets/images/diving-bell.jpg"),
   divingBellLanding: require("../assets/images/diving-bell-landing.png"),
   esaReference: require("../assets/images/ESA-reference.jpg"),
   hi: require("../assets/images/hi.gif"),
   jdbDictating: require("../assets/images/jdb-dictating.jpg"),
   jdbWithKids: require("../assets/images/jdb-with-kids.jpg"),
-  lucilleBluthWink: require("../assets/images/lucille-bluth-wink.gif"),
   moon: require("../assets/images/moon.jpg"),
   okGoTreadmill: require("../assets/images/ok-go-treadmill.gif"),
-  oscarWilde: require("../assets/images/oscar-wilde.jpg"),
   prestonTreadmill: require("../assets/images/treadmill-Preston-prison.jpg"),
   telegraphTapeWebcam: require("../assets/images/telegraph-tape-webcam.png"),
   treadmill: require("../assets/images/treadmill.jpg"),
@@ -96,11 +92,11 @@ export default class Presentation extends React.Component {
             slide deck is online!
           </Heading>
           <Link
-            href="http://janabeck.com/diving-bell-talk/"
+            href="http://janabeck.com/diving-bell-talk/nightly-build/"
             target="_blank"
             textColor="secondary"
           >
-            http://janabeck.com/diving-bell-talk/
+            janabeck.com/diving-bell-talk/nightly-build/
           </Link>
           <Heading
             lineHeight={1.35}
@@ -423,7 +419,6 @@ export default class Presentation extends React.Component {
           </Heading>
           <Heading size={3}>😮&nbsp;&nbsp;😮&nbsp;&nbsp;😮</Heading>
         </Slide>
-        <Slide bgImage={images.lucilleBluthWink} />
         <Slide
           style={{
             backgroundImage: `url(${images.webgazer})`,
@@ -432,11 +427,6 @@ export default class Presentation extends React.Component {
             backgroundSize: "contain"
           }}
         />
-        <Slide>
-          <Heading fit size={1} textFont="monospace">
-            {"<script src=\"webgazer.js\" type=\"text/javascript\" >"}
-          </Heading>
-        </Slide>
         <CodeSlide
           lang="js"
           code={require("raw-loader!../assets/code/webgazer-simple-start.example")}
@@ -453,91 +443,23 @@ export default class Presentation extends React.Component {
           ]}
         />
         <Slide>
-          <Heading fit lineHeight={1.25}>
-            {shuffle([
-              "👷‍♀️",
-              "👷🏻‍♀️",
-              "👷🏼‍♀️",
-              "👷🏽‍♀️",
-              "👷🏾‍♀️",
-              "👷🏿‍♀️",
-              "👷",
-              "👷🏻",
-              "👷🏼",
-              "👷🏽",
-              "👷🏾",
-              "👷🏿"
-            ]).join("")}
-          </Heading>
-          <Heading fit>Web Workers</Heading>
-          <Heading fit lineHeight={1.25}>
-            {shuffle([
-              "👷‍♀️",
-              "👷🏻‍♀️",
-              "👷🏼‍♀️",
-              "👷🏽‍♀️",
-              "👷🏾‍♀️",
-              "👷🏿‍♀️",
-              "👷",
-              "👷🏻",
-              "👷🏼",
-              "👷🏽",
-              "👷🏾",
-              "👷🏿"
-            ]).join("")}
-          </Heading>
-        </Slide>
-        <CodeSlide
-          lang="js"
-          code={require("raw-loader!../assets/code/webgazer-react-1.example")}
-          ranges={[
-            { loc: [0, 0], title: "WebGazer in React" },
-            { loc: [0, 1], note: "component class" },
-            {
-              loc: [4, 9],
-              note: "initial state"
-            },
-            {
-              loc: [11, 12],
-              note: "first mount = hook for WebGazer setup"
-            },
-            {
-              loc: [23, 33],
-              note: "setState in callback"
-            },
-            {
-              loc: [19, 23],
-              note: "hand-waving 👋"
-            },
-            {
-              loc: [42, 48],
-              note: "render the state"
-            }
-          ]}
-        />
-        <Slide>
           <WebGazer showPredictionPoints={false} />
         </Slide>
         <CodeSlide
           lang="js"
-          code={require("raw-loader!../assets/code/webgazer-react-2.example")}
+          code={require("raw-loader!../assets/code/webgazer-simple-end.example")}
           ranges={[
-            { loc: [0, 0], title: "clean up!" },
-            { loc: [38, 41], note: "remove listener & end webcam session" }
+            { loc: [0, 1], title: "clean up!", note: "such complexity!" }
           ]}
         />
         <CodeSlide
           lang="js"
-          code={require("raw-loader!../assets/code/webgazer-react-3.example")}
+          code={require("raw-loader!../assets/code/webgazer-simple-start-2.example")}
           ranges={[
             { loc: [0, 0], title: ".showPredictionPoints()" },
             {
-              loc: [11, 17],
-              note: "pass `true` to showPredictionPoints()"
-            },
-            {
-              loc: [18, 24],
-              note: "pass `false` to cleanup"
+              loc: [8, 9],
+              note: "insert `showPredictionPoints` call before `begin`"
             }
           ]}
         />
@@ -624,9 +546,91 @@ export default class Presentation extends React.Component {
             <br />partner-assisted scanning
           </Text>
           <Heading fit lineHeight={1.5} textColor="secondary">
-            implementation (code)
+            loop to update current letter
           </Heading>
         </Slide>
+        <Slide bgColor="quartenary">
+          <Text lineHeight={1.5} textColor="secondary">
+            <S type="italic">partner-less</S>
+            <br />partner-assisted scanning
+          </Text>
+          <Heading fit lineHeight={1.5} textColor="secondary">
+            letter selection via blink detection
+          </Heading>
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-simple-start.example")}
+          ranges={[
+            { loc: [1, 8], title: "blink detection", note: "how to even??" }
+          ]}
+        />
+        <Slide bgImage={images.diveIn}>
+          <Heading fit textColor="primary">
+            WebGazer: let's dive in!
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading
+            lineHeight={1.5}
+            size={3}
+            style={{ textTransform: "uppercase" }}
+            textColor="tertiary"
+          >
+            Achtung!
+          </Heading>
+          <Heading>⚠️&nbsp;&nbsp;⚠️&nbsp;&nbsp;⚠️</Heading>
+          <Heading fit lineHeight={1.25}>
+            hacks ahead
+          </Heading>
+          <Heading>⚠️&nbsp;&nbsp;⚠️&nbsp;&nbsp;⚠️</Heading>
+        </Slide>
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-blinkDetector.example")}
+          ranges={[
+            {
+              loc: [0, 0],
+              title: "BlinkDetector.detectBlink"
+            },
+            {
+              loc: [1, 2],
+              note: "receives eyesObj"
+            },
+            { loc: [23, 24], note: "returns eyesObj" },
+            { loc: [18, 22], note: "mutates eyesObj" }
+          ]}
+        />
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-main-loop.example")}
+          ranges={[
+            { loc: [0, 0], title: "webgazer's main loop" },
+            {
+              loc: [0, 1],
+              note: "loop function"
+            },
+            {
+              loc: [28, 31],
+              note: "called 60 times per second"
+            },
+            {
+              loc: [1, 2],
+              note: "gets prediction"
+            },
+            { loc: [5, 6], note: "fires gaze listener" },
+            { loc: [5, 6], note: "goal: access blinks via `gazeData`" }
+          ]}
+        />
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/webgazer-RidgeRegThreaded-predict.example")}
+          ranges={[
+            { loc: [0, 0], title: "hoist blink data" },
+            { loc: [1, 2], note: "function that receives eyesObj" },
+            { loc: [9, 12], note: "add `blinked` property" }
+          ]}
+        />
         <Slide
           style={{
             backgroundColor: themeColors.primary,

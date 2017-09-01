@@ -1,0 +1,25 @@
+webgazer.BlinkDetector.prototype.detectBlink =
+  function(eyesObj) {
+    if (!eyesObj) {
+      return eyesObj;
+    }
+
+    const data = this.extractBlinkData(
+      eyesObj
+    );
+    this.blinkData.push(data);
+
+    eyesObj.left.blink = false;
+    eyesObj.right.blink = false;
+
+    if (this.blinkData.length < this.window) {
+      return eyesObj;
+    }
+
+    if (this.isBlink()) {
+      eyesObj.left.blink = true;
+      eyesObj.right.blink = true;
+    }
+
+    return eyesObj;
+  };
