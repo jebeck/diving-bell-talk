@@ -28,7 +28,6 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 
 import FreqOrderedLetters from "../assets/components/freqorderedletters";
-import WebGazer from "../assets/components/webgazer.js";
 
 // Require CSS
 require("normalize.css");
@@ -54,6 +53,8 @@ const images = {
   treadmill: require("../assets/images/treadmill.jpg"),
   webcam: require("../assets/images/webcam.jpg"),
   webgazer: require("../assets/images/webgazer.png"),
+  webgazerDemo1: require("../assets/images/webgazer-demo1.gif"),
+  webgazerDemo2: require("../assets/images/webgazer-demo2.gif"),
   williamCubitt: require("../assets/images/william-cubitt.jpg"),
   williamCubittDead: require("../assets/images/william-cubitt-dead.png"),
   xcoffee: require("../assets/images/xcoffee.gif")
@@ -442,9 +443,7 @@ export default class Presentation extends React.Component {
             }
           ]}
         />
-        <Slide>
-          <WebGazer showPredictionPoints={false} />
-        </Slide>
+        <Slide bgImage={images.webgazerDemo1} />
         <CodeSlide
           lang="js"
           code={require("raw-loader!../assets/code/webgazer-simple-end.example")}
@@ -463,9 +462,10 @@ export default class Presentation extends React.Component {
             }
           ]}
         />
-        <Slide notes="(remember to talk about how WebGazer uses clicks and cursor movements!)">
-          <WebGazer showPredictionPoints />
-        </Slide>
+        <Slide
+          bgImage={images.webgazerDemo2}
+          notes="(remember to talk about how WebGazer uses clicks and cursor movements!)"
+        />
         <Slide bgColor="quartenary">
           <Text lineHeight={1.5} textColor="secondary">
             <S type="italic">partner-less</S>
