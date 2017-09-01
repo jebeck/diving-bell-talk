@@ -492,6 +492,16 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
+        <Slide bgColor="secondary" textColor="primary">
+          <Heading fit lineHeight={1.5}>
+            German frequency-ordered alphabet
+          </Heading>
+          <Layout>
+            <Fill>
+              <FreqOrderedLetters locale="de" />
+            </Fill>
+          </Layout>
+        </Slide>
         <Slide>
           <Heading fit lineHeight={1.5}>
             the partner's role

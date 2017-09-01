@@ -36,6 +36,37 @@ const FreqOrderedLetters = (props) => {
 
 FreqOrderedLetters.defaultProps = {
   letters: {
+    de: [
+      "E",
+      "N",
+      "I",
+      "R",
+      "S",
+      "T",
+      "A",
+      "H",
+      "D",
+      "U",
+      "L",
+      "C",
+      "G",
+      "M",
+      "O",
+      "B",
+      "W",
+      "F",
+      "K",
+      "Z",
+      "V",
+      "P",
+      "Ü",
+      "Ä",
+      "ß",
+      "Ö",
+      "J",
+      "Y",
+      "X"
+    ],
     en: [
       "E",
       "T",
