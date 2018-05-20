@@ -93,11 +93,11 @@ export default class Presentation extends React.Component {
             slide deck is online!
           </Heading>
           <Link
-            href="http://janabeck.com/diving-bell-talk/nightly-build/"
+            href="http://janabeck.com/diving-bell-talk/codemania/"
             target="_blank"
             textColor="secondary"
           >
-            janabeck.com/diving-bell-talk/nightly-build/
+            janabeck.com/diving-bell-talk/codemania/
           </Link>
           <Heading
             lineHeight={1.35}
@@ -492,16 +492,6 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide bgColor="secondary" textColor="primary">
-          <Heading fit lineHeight={1.5}>
-            German frequency-ordered alphabet
-          </Heading>
-          <Layout>
-            <Fill>
-              <FreqOrderedLetters locale="de" />
-            </Fill>
-          </Layout>
-        </Slide>
         <Slide>
           <Heading fit lineHeight={1.5}>
             the partner's role
@@ -587,7 +577,7 @@ export default class Presentation extends React.Component {
             style={{ textTransform: "uppercase" }}
             textColor="tertiary"
           >
-            Achtung!
+            Caution!
           </Heading>
           <Heading>⚠️&nbsp;&nbsp;⚠️&nbsp;&nbsp;⚠️</Heading>
           <Heading fit lineHeight={1.25}>
