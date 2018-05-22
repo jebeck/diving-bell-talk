@@ -43,6 +43,7 @@ const images = {
   divingBell: require("../assets/images/diving-bell.jpg"),
   divingBellLanding: require("../assets/images/diving-bell-landing.png"),
   esaReference: require("../assets/images/ESA-reference.jpg"),
+  eyePatches: require("../assets/images/eye_patches.png"),
   hi: require("../assets/images/hi.gif"),
   jdbDictating: require("../assets/images/jdb-dictating.jpg"),
   jdbWithKids: require("../assets/images/jdb-with-kids.jpg"),
@@ -428,6 +429,31 @@ export default class Presentation extends React.Component {
             backgroundSize: "contain"
           }}
         />
+        <Slide>
+          <Heading>two parts</Heading>
+          <List>
+            <ListItem>tracker module(s)</ListItem>
+            <ListItem>regression module(s)</ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading fit>1. tracker module(s)</Heading>
+          <Heading size={3}>= where are the 👀 in the webcam image</Heading>
+        </Slide>
+        <Slide
+          style={{
+            backgroundImage: `url(${images.eyePatches})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain"
+          }}
+        />
+        <Slide>
+          <Heading fit>2. regression module(s)</Heading>
+          <Heading size={3}>
+            = where are the 👀 <S type="italic">looking</S>
+          </Heading>
+        </Slide>
         <CodeSlide
           lang="js"
           code={require("raw-loader!../assets/code/webgazer-simple-start.example")}
@@ -629,6 +655,68 @@ export default class Presentation extends React.Component {
             { loc: [0, 0], title: "hoist blink data" },
             { loc: [1, 2], note: "function that receives eyesObj" },
             { loc: [9, 12], note: "add `blinked` property" }
+          ]}
+        />
+        <CodeSlide
+          lang="js"
+          code={require("raw-loader!../assets/code/gazeListener.example")}
+          ranges={[
+            {
+              loc: [0, 0],
+              note: "in <SelectLetter/> component",
+              title: "final gaze listener"
+            },
+            {
+              loc: [0, 5],
+              note: "the immutable"
+            },
+            {
+              loc: [6, 11],
+              note: "the mutable"
+            },
+            { loc: [12, 13], note: "start at zero" },
+            {
+              loc: [14, 15],
+              note: "THE CALLBACK!!!"
+            },
+            {
+              loc: [16, 17],
+              note: "yay for hoisted data 🙌"
+            },
+            {
+              loc: [17, 18],
+              note: "the positive condition"
+            },
+            {
+              loc: [18, 19],
+              note: "first blink"
+            },
+            {
+              loc: [19, 24],
+              note: "store it"
+            },
+            {
+              loc: [24, 32],
+              note: "reset after passing threshold"
+            },
+            {
+              loc: [33, 34],
+              note: "negative condition (blinked = false)"
+            },
+            {
+              loc: [34, 36],
+              note:
+                "*now* (next tick) we increment blink count... = \"Hi, 👋, I am a hack!\""
+            },
+            {
+              loc: [36, 49],
+              note:
+                "select (then reset)...when a) double blink, b) within threshold, c) on same letter"
+            },
+            {
+              loc: [49, 52],
+              note: "reset `blinked` state so each blink only counted once"
+            }
           ]}
         />
         <Slide

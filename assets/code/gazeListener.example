@@ -1,0 +1,56 @@
+const {
+  currentLetter,
+  dblBlinkThreshold: dblThreshold,
+  selectLetter // function
+} = this.props;
+
+const {
+  blinked: alreadyBlinked,
+  firstBlinkLetter, // what it says on the tin
+  firstBlinkTs: firstTs, // ditto
+} = this.state;
+
+let blinkCount = 0;
+
+webgazer.setGazeListener((data, elapsed) => {
+  if (data != null) {
+    const blinked = data.all[0].blinked
+    if (blinked) {
+      if (!alreadyBlinked) {
+        this.setState(() => ({
+          blinked: true,
+          firstBlinkLetter: currentLetter,
+          firstBlinkTs: elapsed,
+        }));
+        setTimeout(() => {
+          this.setState(() => ({
+            blinked: false,
+            firstBlinkLetter: null,
+            firstBlinkTs: null,
+          }));
+          blinkCount = 0;
+        }, dblThreshold);
+      }
+    } else {
+      if (alreadyBlinked) {
+        blinkCount += 1;
+        if (
+  /* a */ blinkCount >= 2 &&
+  /* b */ elapsed - firstTs < dblThreshold &&
+  /* c */ firstBlinkLetter === currentLetter
+        ) {
+          selectLetter();
+          blinkCount = 0;
+          return this.setState({
+            blinked: false,
+            firstBlinkLetter: null,
+            firstBlinkTime: null,
+          });
+        }
+        this.setState(() => ({
+          blinked: false,
+        }));
+      }
+    }
+  }
+});
